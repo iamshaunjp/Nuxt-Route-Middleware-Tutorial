@@ -15,7 +15,7 @@
   const username = ref()
 
   const login = () => {
-    user.value = {username: username, role: 'user'}
+    user.value = {username: username, role: 'admin'}
 
     router.push('/')
   }
