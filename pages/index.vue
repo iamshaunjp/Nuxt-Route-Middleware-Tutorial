@@ -7,8 +7,4 @@
 
 <script setup>
   const user = useCookie('user')
-
-  definePageMeta({
-    middleware: ['auth']
-  })
 </script>
