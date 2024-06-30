@@ -9,6 +9,9 @@ export default defineNuxtRouteMiddleware((to, from) => {
   if (user.value.role !== 'admin') {
     console.log('you need to be an admin to view the admin page')
     
-    return navigateTo('/')
+    throw showError({
+      statusCode: 403,
+      statusMessage: 'You are not allowed to view this page!'
+    })
   }
 })
